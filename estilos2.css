@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.grid{
+	width: 100%;
+	max-width: auto;
+	/* border: 10px solid #393e4d; */
+	margin: auto;
+
+	line-height: 40px;
+	text-align: center;
+}
+

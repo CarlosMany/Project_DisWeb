@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "LODBROK";
+  src: url(archivos/2.-Tipografías/Roboto-Thin.ttf) format("truetype");
+  font-family: "LODBROK-G";
+  src: url(archivos/2.-Tipografías/Roboto-Regular.ttf) format("truetype");
+}
+
+body {
+  /* background: rgb(53,137,160); */
+
+  background-color: #30183b;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header   header    header"
+    "contenido contenido contenido"
+    "contenido contenido    contenido"
+    "footer   footer    footer";
+}
+
+.grid .header {
+  grid-column-start: header;
+  grid-column-end: header;
+  height: 100px;
+}
+
+.grid .contenido {
+  background: #30183b;
+  color: #000;
+  grid-area: contenido;
+}
+
+.grid .widget {
+  background: #ff8000;
+  grid-area: widget;
+}
+
+.grid .footer {
+  background: #222831;
+  grid-area: footer;
+}
+
+.header .menu {
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-columns: repeat(auto-fit, minmax(10%, 20%));
+  align-items: center;
+  font-family: "LODBROK-G", sans-serif;
+  font-size: 20px;
+  justify-items: center;
+  background: #30183b;
+}
+
+#logo {
+  justify-self: center;
+  padding: 5px;
+  width: 100px;
+  animation: myAnim2 1s ease 0s 1 normal forwards;
+}
+
+.inicio {
+  animation: myAnim2 1.2s ease 0s 1 normal forwards;
+}
+
+.nosotros {
+  animation: myAnim2 1.5s ease 0s 1 normal forwards;
+}
+
+.contactanos {
+  animation: myAnim2 1.7s ease 0s 1 normal forwards;
+}
+
+.tienda_en_linea {
+  animation: myAnim2 1.9s ease 0s 1 normal forwards;
+}
+
+.inicio .inicio_btn,
+.nosotros_btn,
+.contactanos_btn,
+.tienda_en_linea_btn {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  /* background:white; */
+  /* font-size:28px; */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 500ms;
+  &:after,
+  &:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 500ms;
+  }
+  &:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid #492d7d;
+    border-left: 5px solid #492d7d;
+  }
+  &:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid #492d7d;
+    border-right: 5px solid #492d7d;
+  }
+  &:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* // background:rgba(0,0,0,.5);
+		// color:white; */
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+      /* // border-color:white; */
+    }
+  }
+}
+
+@keyframes myAnim2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.video_1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Asegúrate de que el div ocupe toda la altura de la ventana */
+  padding-bottom: 5%;
+}
+
+.video_1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegurará que el video cubra todo el espacio sin ser cortado */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video_1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.contenido {
+  position: relative;
+  overflow: hidden;
+}
+
+.video_1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;  
+  transition: transform 0.8s;  
+}
+
+
+
+.informacion1{
+    display: grid;
+    grid-template-columns: 50% repeat(1,1fr);
+    height: 40%;
+    align-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-family: "LODBROK", sans-serif;
+    color: #fff;
+    filter: brightness(150%);
+    width: 100%;
+    /* background-color: #ff8000; */
+}
+
