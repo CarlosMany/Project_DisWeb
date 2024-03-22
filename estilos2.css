@@ -1,5 +1,397 @@
-
-.grid{
-	text-align: center;
+.grid {
+  text-align: center;
 }
 
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  .enlaces-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .enlaces-menu div {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    display: block;
+    text-align: center;
+  }
+
+  .video_1 video {
+    width: 100%; /* El video llenará el ancho de su contenedor */
+    height: auto; /* La altura se ajustará manteniendo la relación de aspecto */
+    max-height: 100%; /* Opcional: Limita la altura máxima del video */
+  }
+
+  .video_1::after {
+    display: none;
+  }
+
+  div .video_1 {
+    width: 100%;
+    height: 17%;
+  }
+
+  .inicio .inicio_btn,
+  .nosotros_btn,
+  .contactanos_btn {
+    display: none;
+  }
+
+  .texto1 {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .informacion1 {
+    grid-template-columns: 50% repeat(1, 1fr);
+  }
+
+  .imagen8 {
+    width: 100%;
+  }
+
+  .texto8 {
+    width: 50%;
+  }
+  .overlay .text {
+    display: block;
+    font-size: 59%;
+    transform: rotate(-90deg);
+    width: 100%;
+    
+  }
+
+  .overlay .head {
+    display: none;
+  }
+
+  .card:hover .head {
+    display: none;
+  }
+
+  .card img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    filter: brightness(40%);
+
+    /* filter: grayscale(100%); */
+  }
+
+  .overlay {
+    height: 50%;
+  }
+
+  .head {
+    display: none;
+  }
+
+  .vermas {
+    display: block;
+  }
+  .conta a {
+    animation: delayLink 2s; /* tiempo de retardo deseado */
+    pointer-events: none; /* evita que se haga clic en el enlace */
+  }
+
+  @keyframes delayLink {
+    0%,
+    99.9999% {
+      pointer-events: none;
+    }
+    100% {
+      pointer-events: auto;
+    }
+  }
+
+  .landing .header .menu {
+    grid-template-columns: none;
+  }
+
+  .landing .texto7 {
+    font-size: 15px;
+  }
+
+  .landing h2 strong {
+    font-size: 2em;
+  }
+
+  .landing h1 {
+    font-size: 2em;
+  }
+
+  .landing .texto2 span {
+    font-size: 13px;
+  }
+
+  .landing .imagen2 img {
+    width: 90%;
+  }
+  .landing .texto4 span {
+    font-size: 13px;
+  }
+  .landing .texto5 span {
+    font-size: 13px;
+  }
+  .landing .texto6 span {
+    font-size: 13px;
+  }
+  .landing .imagen4 img {
+    width: 90%;
+  }
+  .landing .imagen5 img {
+    width: 90%;
+  }
+  .landing .imagen6 img {
+    width: 90%;
+  }
+  .landing .lod img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-hamburguesa {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  .enlaces-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .enlaces-menu div {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    display: block;
+    text-align: center;
+  }
+
+  .video_1 video {
+    width: 100%; /* El video llenará el ancho de su contenedor */
+    height: auto; /* La altura se ajustará manteniendo la relación de aspecto */
+    max-height: 100%; /* Opcional: Limita la altura máxima del video */
+  }
+
+  .video_1::after {
+    display: none;
+  }
+
+  div .video_1 {
+    width: 100%;
+    height: 10%;
+  }
+
+  .inicio .inicio_btn,
+  .nosotros_btn,
+  .contactanos_btn {
+    display: none;
+  }
+
+  .texto1 {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .informacion1 {
+   display: flex;
+   flex-direction: column;
+  }
+
+  .imagen8 {
+    width: 100%;
+  }
+
+  .texto8 {
+    width: 100%;
+    font-size: 15px;
+  }
+  .overlay .text {
+    display: block;
+    font-size: 5px;
+    transform: rotate(-90deg);
+    width: 100%;
+  }
+
+  .overlay .head {
+    display: none;
+  }
+
+  .card:hover .head {
+    display: none;
+  }
+
+  .card img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    filter: brightness(40%);
+
+    /* filter: grayscale(100%); */
+  }
+
+  .overlay {
+    height: 50%;
+  }
+
+  .head {
+    display: none;
+  }
+
+  .vermas {
+    display: block;
+  }
+  .conta a {
+    animation: delayLink 2s; /* tiempo de retardo deseado */
+    pointer-events: none; /* evita que se haga clic en el enlace */
+  }
+
+  @keyframes delayLink {
+    0%,
+    99.9999% {
+      pointer-events: none;
+    }
+    100% {
+      pointer-events: auto;
+    }
+  }
+
+  .landing .header .menu {
+    grid-template-columns: none;
+  }
+
+  .landing .texto7 {
+    font-size: 15px;
+  }
+
+  .landing h2 strong {
+    font-size: 2em;
+  }
+
+  .landing h1 {
+    font-size: 2em;
+  }
+
+  .landing .texto2 span {
+    font-size: 13px;
+  }
+
+  .landing .texto2 {
+    width: 100%;
+  }
+
+  .landing .imagen2 img {
+    width: 90%;
+  }
+  .landing .texto4 span {
+    font-size: 13px;
+  }
+  .landing .texto5 span {
+    font-size: 13px;
+  }
+  .landing .texto6 span {
+    font-size: 13px;
+  }
+  .landing .imagen4 img {
+    width: 90%;
+  }
+  .landing .imagen5 img {
+    width: 90%;
+  }
+  .landing .imagen6 img {
+    width: 90%;
+  }
+  .landing .lod img {
+    width: 50%;
+  }
+
+  .landing .informacion2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing .informacion3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing .informacion4 {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing .informacion5 {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing .informacion6 {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing .texto4 {
+    width: 100%;
+  }
+  .landing .texto5 {
+    width: 100%;
+  }
+  .landing .texto6 {
+    width: 100%;
+  }
+
+  .landing .imagen2 {
+    width: 100%;
+  }
+  .landing .imagen4 {
+    width: 100%;
+  }
+  .landing .imagen5 {
+    width: 100%;
+  }
+  .landing .imagen6 {
+    width: 100%;
+  }
+  .landing .imagen7 {
+    width: 100%;
+  }
+  /* ------- */
+  .landing .imagen2 img {
+    border-radius: 10%;
+  }
+  .landing .imagen4 img {
+    border-radius: 10%;
+  }
+  .landing .imagen5 img {
+    border-radius: 10%;
+  }
+  .landing .imagen6 img {
+    border-radius: 10%;
+  }
+
+  .imagen8 img{
+    width: 100%;
+    animation: none;
+  }
+
+  .imagen8{
+    width: 90%;
+  }
+
+
+}
