@@ -1,0 +1,111 @@
+bucador
+
+productos recientes vistos/buscados
+
+
+por categorias
+
+
+distribuir la informacion por secciones y de diferentes tamaños :3
+
+
+/* Estilos para dispositivos con una anchura máxima de 600px */
+@media only screen and (max-width: 600px) {
+  .grid,
+  .header,
+  .menu,
+  .contenido,
+  .footer {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a img {
+    width: 80%;
+  }
+  .texto1,
+  .texto2,
+  .texto3,
+  .texto4,
+  .texto5,
+  .texto6,
+  .texto7,
+  .texto8 {
+    padding: 0 15px;
+  }
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .card img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Estilos para dispositivos tablet con una anchura máxima de 768px */
+@media only screen and (max-width: 768px) {
+  .grid,
+  .header,
+  .menu,
+  .contenido,
+  .footer {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a img {
+    width: 80%;
+  }
+  .texto1,
+  .texto2,
+  .texto3,
+  .texto4,
+  .texto5,
+  .texto6,
+  .texto7,
+  .texto8 {
+    padding: 0 15px;
+  }
+  .card {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .card img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Estilos para dispositivos con una anchura mínima de 768px */
+@media only screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+}

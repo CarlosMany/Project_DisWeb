@@ -3,6 +3,8 @@
   src: url(archivos/2.-Tipografías/Roboto-Thin.ttf) format("truetype");
   font-family: "LODBROK-G";
   src: url(archivos/2.-Tipografías/Roboto-Regular.ttf) format("truetype");
+  font-family: "LODBROK-INDEX";
+  src: url(archivos/2.-Tipografías/AgeoPersonalUse-Light.otf) format("truetype")
 }
 
 body {
@@ -27,11 +29,11 @@ body {
     "footer   footer    footer";
 }
 
-.grid .header {
+/* .grid .menu {
   grid-column-start: header;
   grid-column-end: header;
   height: 100px;
-}
+} */
 
 .grid .contenido {
   background: #30183b;
@@ -49,7 +51,28 @@ body {
   grid-area: footer;
 }
 
-.header .menu {
+
+/* codigo agregado */
+
+.menu a{
+  /* Estilos para tus enlaces */
+  display: inline-block; /* O block, dependiendo de tus necesidades */
+  margin: 0 10px; /* Ajusta el espaciado según sea necesario */
+  text-decoration: none; /* Para eliminar el subrayado */
+  color: white; /* O el color que prefieras */
+  z-index: 1001; /* Un valor más alto que el del menú para asegurarse de que sean clicables */
+}
+
+.menu span{
+  z-index: 1001;
+}
+
+
+
+
+
+/* aqui termina codigo agregado */
+.menu {
   display: grid;
   /* grid-gap: 10px; */
   grid-template-columns: repeat(auto-fit, minmax(10%, 20%));
@@ -57,7 +80,7 @@ body {
   font-family: "LODBROK-G", sans-serif;
   font-size: 20px;
   justify-items: center;
-  background: #30183b;
+  z-index: 1000;
 }
 
 #logo {
@@ -71,14 +94,17 @@ body {
 
 .inicio {
   animation: myAnim2 1.2s ease 0s 1 normal forwards;
+  z-index: 1001;
 }
 
 .nosotros {
   animation: myAnim2 1.5s ease 0s 1 normal forwards;
+  z-index: 1001;
 }
 
 .contactanos {
   animation: myAnim2 1.7s ease 0s 1 normal forwards;
+  z-index: 1001;
 }
 
 .tienda_en_linea {
@@ -89,6 +115,7 @@ body {
 .nosotros_btn,
 .contactanos_btn,
 .tienda_en_linea_btn {
+  z-index: 1001;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -147,14 +174,14 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh; /* Asegúrate de que el div ocupe toda la altura de la ventana */
+  height: 100vh;
   padding-bottom: 5%;
 }
 
 .video_1 video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Esto asegurará que el video cubra todo el espacio sin ser cortado */
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -185,7 +212,7 @@ body {
 
 .informacion1 {
   display: grid;
-  grid-template-columns: 35% repeat(1, 1fr);
+  /* grid-template-columns: 35% repeat(1, 1fr); */
 
   align-content: center;
   align-items: center;
@@ -206,9 +233,10 @@ h1 {
 }
 
 .texto1 {
-  width: 70%;
+  width: 100%;
   display: grid;
-  font-size: 1em;
+  font-family: "LODBROK-INDEX", sans-serif;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -291,7 +319,7 @@ h2 strong {
   background: #6c7fbb;
   color: #ffffff !important;
   font-weight: 100;
-  padding: 20px;
+  padding: 10px;
   text-transform: uppercase;
   border-radius: 6px;
   display: inline-block;
@@ -505,24 +533,21 @@ h2 strong {
 }
 
 .imagen8 {
-  width: 70%;
+  width: 60%;
 }
 .imagen8 img {
-  width: 70%;
+  width: 80%;
   height: auto;
-  filter: brightness(150%);
+  /* filter: brightness(150%);
   filter: drop-shadow(2px 2px 2px #4b4b4b);
-  animation: palpitar 4s infinite ease-in-out;
+  animation: palpitar 4s infinite ease-in-out; */
 }
 .texto8 {
-  width: 70%;
+  width: 90%;
+  font-size: 30px;
+  font-family: "LODBROK-INDEX", sans-serif;
 }
 
-.texto8 strong {
-  font-family: "LODBROK", sans-serif;
-}
-
-/* carrusel */
 
 .conta {
   display: flex;
@@ -620,6 +645,7 @@ h2 strong {
   display: none;
   font-size: 30px;
   cursor: pointer;
+  z-index: 10001;
 }
 
 .overlay .text{
@@ -643,4 +669,51 @@ h2 strong {
   border-radius: 10px; /* Adjust for rounded corners */
   cursor: pointer;
   text-decoration: none;
+}
+
+.responsivo{
+  display: flex;
+  justify-content: center;
+}
+
+.informacion10 {
+  display: flex;
+  flex-direction: row-reverse;
+
+  align-content: center;
+  align-items: center;
+  padding-top: 2%;
+  /* padding-right: 10%; */
+  /* padding-left: 10%; */
+  font-family: "LODBROK-INDEX", sans-serif;
+  color: #fff;
+  filter: brightness(150%);
+  width: 100%;
+  /* height: 30%; */
+  /* background-color: #ff8000; */
+}
+
+.imagen10{
+  width: 80%;
+  opacity: 0.5;
+}
+
+.informacion1 .imagen1 img{
+  width: 40%;
+  opacity: 0.5;
+}
+
+.landing .header .menu{
+  display: grid;
+  grid-template-columns: 35% repeat(3, 90%);
+  align-items: center;
+  font-family: "LODBROK-G", sans-serif;
+  justify-items: center;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.responsivo{
+  display: none;
 }
