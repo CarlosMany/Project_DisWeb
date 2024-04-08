@@ -17,7 +17,7 @@
   }
 
   #logo {
-  width: 100%;
+    width: 100%;
   }
 
   .enlaces-menu {
@@ -78,7 +78,6 @@
     font-size: 59%;
     transform: rotate(-90deg);
     width: 100%;
-    
   }
 
   .overlay .head {
@@ -169,23 +168,21 @@
   .landing .lod img {
     width: 50%;
   }
-  .responsivo{
-    display: flex;
-
+  .responsivo {
+    display: none;
   }
-
-  .responsivo img{
-    width: 100%;
-    height: 260px;
-  }
-
-  .conta{
+  .conta {
     display: none;
   }
 
+  .landing .example_e.amazon {
+    width: 30% !important;
+  }
 
-  .landing .example_e.amazon{
-    width: 30%!important;
+  .carusel700px{
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -202,7 +199,9 @@
     margin-top: -10px;
   }
 
-
+  .index .carusel700px{
+    display: none;
+  }
   .enlaces-menu {
     display: none;
     flex-direction: column;
@@ -246,8 +245,8 @@
   }
 
   .informacion1 {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .imagen8 {
@@ -419,103 +418,111 @@
     border-radius: 10%;
   }
 
-  .imagen8 img{
+  .imagen8 img {
     width: 100%;
     animation: none;
   }
 
-  .imagen8{
+  .imagen8 {
     width: 90%;
   }
 
-
-  .responsivo{
+  .responsivo {
     display: flex;
     margin-bottom: 70px;
   }
 
-  .responsivo img{
+  .responsivo img {
     width: 100%;
     height: 260px;
   }
 
-  .conta{
+  .conta {
     display: none;
   }
 
-  
-  .landing .button_cont .example_e.amazon{
-    width: 40%!important;
+  .landing .button_cont .example_e.amazon {
+    width: 40% !important;
+  }
 
-}
+  /* Cards Carousel */
+  /* ---------------------------------------------- */
 
+  .icon-cards {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    margin: 0;
+    color: white;
+    perspective: 1000px;
+    transform-origin: center;
+  }
 
-/* Cards Carousel */
-/* ---------------------------------------------- */
+  /* This is the element that rotates with the animation */
+  .icon-cards__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
 
-.icon-cards {
-  position: relative;
-  width: 60vw;
-  height: 40vw;
-  max-width: 380px;
-  max-height: 250px;
-  margin: 0;
-  color: white;
-  perspective: 1000px;
-  transform-origin: center;
-}
+  .icon-cards__content.step-animation {
+    animation: carousel 8s infinite steps(1) forwards;
+  }
 
-/* This is the element that rotates with the animation */
-.icon-cards__content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: translateZ(-30vw) rotateY(0);
-  animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
+  /* Individual cards */
+  .icon-cards__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transform-origin: center;
+  }
 
-.icon-cards__content.step-animation {
-  animation: carousel 8s infinite steps(1) forwards;
-}
+  .icon-cards__item:nth-child(1) {
+    /* background: #FDD94F; */
+    transform: rotateY(0) translateZ(35vw);
+  }
 
-/* Individual cards */
-.icon-cards__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 60vw;
-  height: 40vw;
-  max-width: 380px;
-  max-height: 250px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.1);
-  border-radius: 6px;
-  transform-origin: center;
-}
+  .icon-cards__item:nth-child(2) {
+    background: #f87949;
+    transform: rotateY(120deg) translateZ(35vw);
+  }
 
-.icon-cards__item:nth-child(1) {
-  /* background: #FDD94F; */
-  transform: rotateY(0) translateZ(35vw);
-}
+  .icon-cards__item:nth-child(3) {
+    background: #fbab48;
+    transform: rotateY(240deg) translateZ(35vw);
+  }
 
-.icon-cards__item:nth-child(2) {
-  background: #F87949;
-  transform: rotateY(120deg) translateZ(35vw);
-}
-
-.icon-cards__item:nth-child(3) {
-  background: #FBAB48;
-  transform: rotateY(240deg) translateZ(35vw);
-}
-
-/* Carousel animation */
-@keyframes carousel {
-  0%,  17.5%  { transform: translateZ(-35vw) rotateY(0); }
-  27.5%, 45%  { transform: translateZ(-35vw) rotateY(-120deg); }
-  55%, 72.5%  { transform: translateZ(-35vw) rotateY(-240deg); }
-  82.5%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
-}
+  /* Carousel animation */
+  @keyframes carousel {
+    0%,
+    17.5% {
+      transform: translateZ(-35vw) rotateY(0);
+    }
+    27.5%,
+    45% {
+      transform: translateZ(-35vw) rotateY(-120deg);
+    }
+    55%,
+    72.5% {
+      transform: translateZ(-35vw) rotateY(-240deg);
+    }
+    82.5%,
+    100% {
+      transform: translateZ(-35vw) rotateY(-360deg);
+    }
+  }
 }
